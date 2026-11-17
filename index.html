@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Tenggat — Pencatat Tugas Kuliah</title>
+    <meta name="description" content="Catat tugas kuliah, pantau tenggatnya, dan tandai yang sudah selesai. Tetap bisa dipakai tanpa internet." />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="color-scheme" content="light dark" />
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+
+    <!-- iOS: tampil layar penuh saat dibuka dari Home Screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Tenggat" />
+
+    <!-- Terapkan tema tersimpan sebelum React dimuat agar tidak berkedip -->
+    <script>
+      try {
+        var t = localStorage.getItem('tenggat:tema')
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Tenggat butuh JavaScript. Aktifkan JavaScript di browser kamu lalu muat ulang halaman.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
